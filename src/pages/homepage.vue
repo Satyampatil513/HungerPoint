@@ -20,30 +20,30 @@
         :userName="item.user_name"
         :rating="item.user_rating"
         :foodId="item.food._id"
-        :consumerId="store.user._id"
-      />
-    </div>
-  </div>
-</template>
+        :consumerId="store.user ? store.user._id : 0"
+            />
+          </div>
+        </div>
+      </template>
 
-<script>
-import FoodCard from '../components/FoodCard.vue';
-import { inject, watch } from 'vue';
+      <script>
+      import FoodCard from '../components/FoodCard.vue';
+      import { inject, watch } from 'vue';
 
-export default {
-  name: 'homepage',
-  components: {
-    FoodCard,
-  },
-  data() {
-    return {
-      foodList: [],
-      loading: true,
-      error: null,
-    };
-  },
-  setup() {
-    const store = inject('store');
+      export default {
+        name: 'homepage',
+        components: {
+          FoodCard,
+        },
+        data() {
+          return {
+            foodList: [],
+            loading: true,
+            error: null,
+          };
+        },
+        setup() {
+          const store = inject('store');
     return { store };
   },
   methods: {

@@ -19,7 +19,7 @@
         <label class="block text-sm font-questrial mb-2" for="servings">Number of Servings</label>
         <input class="w-full p-2 border border-black rounded-3xl" type="number" id="servings" v-model="selectedServings" min="1" :max="people" />
       </div>
-      <button @click="buyFood" class="mt-2 bg-primary text-background py-2 px-4 rounded-3xl hover:bg-highlight transition-colors">
+      <button @click="buyFood" :disabled="consumerId === 0" class="mt-2 bg-primary text-background py-2 px-4 rounded-3xl hover:bg-highlight transition-colors">
         Buy Now
       </button>
     </div>
