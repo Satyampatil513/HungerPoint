@@ -56,7 +56,7 @@ export default {
     async handleAddFoodItem() {
       
       const body = {
-        imageurl: "https://www.example.com/food-image.jpg",
+        imageurl: "https://navobackend.onrender.com/api/showimage?name=Briyani.jpg",
         title: this.title,
         description: this.description,
         numberserving: this.servings,
